@@ -11,4 +11,8 @@ total_faturamento = tabela["Valor Final"].sum()
 faturamento_por_loja = tabela[["ID Loja", "Valor Final"]].groupby("ID Loja").sum()
 #display(faturamento_por_loja)
 faturamento_por_produto = tabela[["ID Loja", "Produto", "Valor Final"]].groupby(["ID Loja", "Produto"]).sum()
-display(faturamento_por_produto)
+#display(faturamento_por_produto)
+
+#Quantidade de produtos vendidos por loja
+quantidade_de_produtos = tabela[["ID Loja", "Produto", "Quantidade"]].groupby(["ID Loja", "Produto"]).sum()
+display(quantidade_de_produtos)
